@@ -26,6 +26,8 @@
     
     <!-- TWITTER -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ThatNFTGawd">
+    <meta name="twitter:creator" content="@ThatNFTGawd">
     <meta name="twitter:title" content="You're Paying Extra For No Reason 🤦">
     <meta name="twitter:description" content="Hyperliquid traders without a referral code are literally donating money. Save 4% with code THATDUDEFREAK.">
     <meta name="twitter:image" content="/og-image.png">
@@ -306,30 +308,26 @@
 
     <section>
         <div class="container">
-            <h2 class="section-title">Math Time 🧮</h2>
-            <div class="calc">
-                <div class="calc-row">
-                    <span class="calc-label">Monthly Volume</span>
-                    <input type="text" class="calc-input" id="volume" value="100,000">
+            <h2 class="section-title">How Much Have YOU Wasted? 💸</h2>
+            <div class="calc" id="wallet-lookup">
+                <div class="calc-row" style="flex-direction: column; gap: 10px;">
+                    <span class="calc-label">Enter your wallet address</span>
+                    <input type="text" class="calc-input" id="wallet-input" placeholder="0x..." style="width: 100%; text-align: left; font-size: 0.9rem;">
                 </div>
-                <div class="calc-row">
-                    <span class="calc-label">Fees (0.035%)</span>
-                    <span class="calc-value red" id="fees">$35</span>
-                </div>
-                <div class="calc-row">
-                    <span class="calc-label">You Save</span>
-                    <span class="calc-value green" id="monthly">$1.40/mo</span>
-                </div>
-                <div class="calc-row">
-                    <span class="calc-label">Per Year</span>
-                    <span class="calc-value green" id="yearly">$16.80</span>
-                </div>
-            </div>
-            <p style="text-align: center; color: #444; margin-top: 20px; font-size: 0.85rem;">
-                Some of y'all trade millions. Do the math. 📈
-            </p>
-        </div>
-    </section>
+                <button onclick="lookupWallet()" style="width: 100%; padding: 15px; margin-top: 15px; background: var(--green); color: black; border: none; border-radius: 8px; font-family: 'Space Mono', monospace; font-weight: 700; cursor: pointer;">
+                    Check My Missed Savings →
+                </button>
+                <div id="wallet-results" style="display: none; margin-top: 20px;">
+                    <div class="calc-row">
+                        <span class="calc-label">Your Total Volume</span>
+                        <span class="calc-value" id="user-volume">$0</span>
+                    </div>
+                    <div class="calc-row">
+                        <span class="calc-label">Fees Paid</span>
+                        <span class="calc-value red" id="user-fees">$0</span>
+                    </div>
+                    <div class="calc-row" style="background: rgba(0,255,136,0.1); margin: 10px -30px; padding: 15px 30px;">
+                        <span class="calc-label" style="color: var(--green);">
 
     <section class="code-section">
         <div class="container">
@@ -364,9 +362,13 @@
 
     <footer>
         <p>Not financial advice. Just common sense.</p>
+        <p style="margin-top: 15px;">
+            <a href="https://twitter.com/ThatNFTGawd" target="_blank" style="color: var(--green); font-weight: 700;">@ThatNFTGawd</a>
+        </p>
         <p style="margin-top: 10px;">
             <a href="https://hyperliquid.xyz" target="_blank">Hyperliquid</a> · 
-            <a href="https://app.hyperliquid.xyz" target="_blank">Trade</a>
+            <a href="https://app.hyperliquid.xyz" target="_blank">Trade</a> ·
+            <a href="https://hyperevmscan.io/address/0x4424e22D318105d061D9792466D6d0CE8BAaB37B" target="_blank">Contract</a>
         </p>
         <p style="margin-top: 15px; font-size: 0.7rem; color: #333;">
             Got a $THATDUDEFREAK token? That's how you found this. You're welcome. 💚
